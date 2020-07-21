@@ -1,0 +1,41 @@
+From 54fc8d64438099e16b41bd66da9e9e0443a7a56e Mon Sep 17 00:00:00 2001
+From: Mritunjay Sharma <mritunjaysharma394@gmail.com>
+Date: Tue, 21 Jul 2020 22:52:21 +0530
+Subject: [PATCH] Added Support for RTEMS-pc386
+
+Signed-off-by: Mritunjay Sharma <mritunjaysharma394@gmail.com>
+---
+ configure/CONFIG_SITE                 | 2 +-
+ configure/os/CONFIG_SITE.Common.RTEMS | 3 ++-
+ 2 files changed, 3 insertions(+), 2 deletions(-)
+
+diff --git a/configure/CONFIG_SITE b/configure/CONFIG_SITE
+index 85329c0..9e1ef0d 100644
+--- a/configure/CONFIG_SITE
++++ b/configure/CONFIG_SITE
+@@ -107,7 +107,7 @@
+ # Which target architectures to cross-compile for.
+ #  Definitions in configure/os/CONFIG_SITE.<host>.Common
+ #  may override this setting.
+-CROSS_COMPILER_TARGET_ARCHS=RTEMS-beatnik
++CROSS_COMPILER_TARGET_ARCHS=RTEMS-pc386
+ #CROSS_COMPILER_TARGET_ARCHS=vxWorks-ppc32
+ 
+ # If only some of your host architectures can compile the
+diff --git a/configure/os/CONFIG_SITE.Common.RTEMS b/configure/os/CONFIG_SITE.Common.RTEMS
+index da73a79..e666c25 100644
+--- a/configure/os/CONFIG_SITE.Common.RTEMS
++++ b/configure/os/CONFIG_SITE.Common.RTEMS
+@@ -22,7 +22,8 @@
+ # FHI:
+ RTEMS_SERIES = 5
+ RTEMS_VERSION = 5
+-RTEMS_BASE = /Users/junkes/MVME6100/RTEMS/rtems-$(RTEMS_VERSION)
++RTEMS_BASE = /home/mritunjay/development/rtems/$(RTEMS_VERSION)
++
+ 
+ # Cross-compile toolchain in $(RTEMS_TOOLS)/bin
+ #
+-- 
+2.25.1
+
