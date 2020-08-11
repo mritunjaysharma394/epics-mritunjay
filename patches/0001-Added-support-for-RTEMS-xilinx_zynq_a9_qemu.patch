@@ -1,0 +1,32 @@
+From d468add08051f9bdc0c25c74a341a8af6c3110b0 Mon Sep 17 00:00:00 2001
+From: Mritunjay Sharma <mritunjaysharma394@gmail.com>
+Date: Wed, 12 Aug 2020 03:54:36 +0530
+Subject: [PATCH] Added support for RTEMS-xilinx_zynq_a9_qemu
+
+Signed-off-by: Mritunjay Sharma <mritunjaysharma394@gmail.com>
+---
+ configure/os/CONFIG_SITE.Common.RTEMS | 8 ++++----
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+
+diff --git a/configure/os/CONFIG_SITE.Common.RTEMS b/configure/os/CONFIG_SITE.Common.RTEMS
+index fba54c32f..2d014e060 100644
+--- a/configure/os/CONFIG_SITE.Common.RTEMS
++++ b/configure/os/CONFIG_SITE.Common.RTEMS
+@@ -10,10 +10,10 @@
+ #RTEMS_BASE = /usr/local/vw/rtems/rtems-$(RTEMS_VERSION)
+ 
+ # FHI:
+-#RTEMS_VERSION = 5.1.0-rc1
+-RTEMS_VERSION = 5.0.0-m2003 
+-#RTEMS_BASE = /Users/junkes/development/rtems/$(RTEMS_VERSION)
+-RTEMS_BASE = /home/h1/GSOC/RTEMS/5.0.0-m2003
++RTEMS_SERIES = 5
++RTEMS_VERSION = 5
++RTEMS_BASE = /home/mritunjay/development/rtems/$(RTEMS_VERSION)-arm
++
+ # Cross-compile toolchain in $(RTEMS_TOOLS)/bin
+ #
+ RTEMS_TOOLS = $(RTEMS_BASE)
+-- 
+2.25.1
+
